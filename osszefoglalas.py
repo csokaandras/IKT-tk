@@ -30,6 +30,7 @@ photo = PhotoImage(file='kiskacsa.png')
 photo.subsample(2,2)
 item = can1.create_image(80,80,image= photo)
 
-
+icon = PhotoImage(file='clipart448417.png')
+foablak.iconphoto(True, icon)
 
 foablak.mainloop()
