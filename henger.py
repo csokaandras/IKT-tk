@@ -4,9 +4,18 @@ import math
 def szamitas ():
     r = int(sugarbe.get())
     m = int(magssagbe.get())
-    terfogat = math.pi * r * r * m
+
+    terfogat = round (math.pi * r * r * m, 2)
     terfogatki.delete (0, END)
     terfogatki.insert (0, str(terfogat)+' cm3' )
+
+    vassur = round (7.874 * terfogat, 2)
+    vashengerki.delete (0, END)
+    vashengerki.insert (0, str(vassur)+' g' )
+
+    fasur = round (0.65 * terfogat, 2)
+    fahengerki.delete (0, END)
+    fahengerki.insert (0, str(fasur)+' g' )
 
 foablak = Tk()
 gyoker = 'D:\\IKT\\IKT-tk\\'
@@ -32,7 +41,7 @@ vashengerm.grid (column=1, row=5, sticky= 'e')
 vashengerki = Entry(foablak)
 vashengerki.grid (column=2, row=5, columnspan=2)
 
-fahengerm = Label(foablak, text='Fahenger:')
+fahengerm = Label(foablak, text='Tölgyfa henger:')
 fahengerm.grid (column=1, row=6, sticky= 'e')
 fahengerki = Entry(foablak)
 fahengerki.grid (column=2, row=6, columnspan=2)
