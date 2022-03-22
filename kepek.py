@@ -1,7 +1,7 @@
 from tkinter import *
 
 ablak1 = Tk()
-gyoker = 'H:\\IKT\\pájton\\'
+gyoker = 'D:\\IKT\\IKT-tk\\'
 
 def klikk():
     print("Klikkeltem")
