@@ -1,6 +1,12 @@
 from tkinter import *
+import math
 
-
+def szamitas ():
+    r = int(sugarbe.get())
+    m = int(magssagbe.get())
+    terfogat = math.pi * r * r * m
+    terfogatki.delete (0, END)
+    terfogatki.insert (0, str(terfogat)+' cm3' )
 
 foablak = Tk()
 gyoker = 'D:\\IKT\\IKT-tk\\'
@@ -33,7 +39,7 @@ fahengerki.grid (column=2, row=6, columnspan=2)
 
 
 
-szamitasg = Button(foablak, text='Kiszámít')
+szamitasg = Button(foablak, text='Kiszámít', command=szamitas)
 szamitasg.grid (column= 3, row=3, sticky= 'e')
 
 
