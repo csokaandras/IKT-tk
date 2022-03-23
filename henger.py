@@ -20,6 +20,11 @@ def szamitas ():
 foablak = Tk()
 gyoker = 'D:\\IKT\\IKT-tk\\'
 
+icon = PhotoImage(file='henger.png')
+foablak.iconphoto(True, icon)
+
+foablak.title('Henger')
+
 sugarm = Label(foablak, text='Sugár (cm):')
 sugarm.grid (column=1, row=1, sticky= 'e')
 sugarbe = Entry(foablak)
@@ -50,6 +55,7 @@ fahengerki.grid (column=2, row=6, columnspan=2)
 
 szamitasg = Button(foablak, text='Kiszámít', command=szamitas)
 szamitasg.grid (column= 3, row=3, sticky= 'e')
+
 
 
 foablak.mainloop()
