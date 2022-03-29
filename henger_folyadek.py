@@ -16,7 +16,7 @@ def szamitas ():
         terfogatki.delete (0,END)
         terfogatki.insert (0, 'Nincs értelme a számításnak.' )
     else:
-        
+    
         terfogat = round (math.pi * r * r * m * 0.001)
         terfogatki.delete (0, END)
         terfogatki.insert (0, str(terfogat)+' l' )
