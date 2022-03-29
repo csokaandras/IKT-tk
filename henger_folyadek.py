@@ -13,7 +13,7 @@ def szamitas ():
     terfogatki.insert (0, str(terfogat)+' l' )
 
     meg = terfogat - borl
-    telitet = round (terfogat / borl)
+    telitet = round (borl * (100 / terfogat))
 
     if borl > terfogat:
         megbeleki.delete (0, END)
@@ -24,7 +24,9 @@ def szamitas ():
         megbeleki.delete (0, END)
         megbeleki.insert (0, str(meg)+' l')
         telitetsegki.delete (0, END)
-        telitetsegki.insert (0, str()+' %')
+        telitetsegki.insert (0, str(telitet)+' %')
+
+    
     
 
 
