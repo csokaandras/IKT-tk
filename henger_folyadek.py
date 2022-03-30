@@ -2,6 +2,14 @@ from tkinter import *
 import math
 
 def szamitas ():
+    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0:
+        megbeleki.delete (0, END)
+        megbeleki.insert (0, 'Nincs értelme a számításnak.' )
+        telitetsegki.delete (0,END)
+        telitetsegki.insert (0, 'Nincs értelme a számításnak.' )
+        terfogatki.delete (0,END)
+        terfogatki.insert (0, 'Nincs értelme a számításnak.' )
+
     r = int(sugarbe.get())
     m = int(magssagbe.get())
     borl = int(borbe.get())
@@ -16,7 +24,7 @@ def szamitas ():
         terfogatki.delete (0,END)
         terfogatki.insert (0, 'Nincs értelme a számításnak.' )
     else:
-    
+
         terfogat = round (math.pi * r * r * m * 0.001)
         terfogatki.delete (0, END)
         terfogatki.insert (0, str(terfogat)+' l' )
