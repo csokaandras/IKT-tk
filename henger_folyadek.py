@@ -1,14 +1,18 @@
 from tkinter import *
 import math
 
+
+
 def szamitas ():
-    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0 or type(sugarbe.get()) != int or type(magassagbe.get()) != int or type(borbe.get()) != int:
-        megbeleki.delete (0, END)
-        megbeleki.insert (0, 'Nincs értelme a számításnak.' )
-        telitetsegki.delete (0,END)
-        telitetsegki.insert (0, 'Nincs értelme a számításnak.' )
-        terfogatki.delete (0,END)
-        terfogatki.insert (0, 'Nincs értelme a számításnak.' )
+    try:
+
+        r = int(sug_field.get()) / 10
+
+        m = int(mag_field.get()) / 10
+
+        bor_terfogat = int(bor_field.get())         # dm3 = l
+
+    except:
 
     r = int(sugarbe.get())
     m = int(magssagbe.get())
@@ -44,7 +48,16 @@ def szamitas ():
             telitetsegki.insert (0, str(telitet)+' %')
 
     
-    
+def hülyee ():
+    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0 or type(sugarbe.get()) != int or type(magassagbe.get()) != int or type(borbe.get()) != int:
+        megbeleki.delete (0, END)
+        megbeleki.insert (0, 'Nincs értelme a számításnak.' )
+        telitetsegki.delete (0,END)
+        telitetsegki.insert (0, 'Nincs értelme a számításnak.' )
+        terfogatki.delete (0,END)
+        terfogatki.insert (0, 'Nincs értelme a számításnak.' )
+    else:
+        szamitas()
 
 
 
@@ -89,7 +102,7 @@ telitetsegki.grid (column=2, row=7, columnspan=2)
 
 
 
-szamitasg = Button(foablak, text='Kiszámít', command=szamitas)
+szamitasg = Button(foablak, text='Kiszámít', command=hülyee)
 szamitasg.grid (column= 3, row=4, sticky= 'e')
 
 
