@@ -2,7 +2,7 @@ from tkinter import *
 import math
 
 def szamitas ():
-    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0:
+    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0 or type(sugarbe.get()) != int or type(magassagbe.get()) != int or type(borbe.get()) != int:
         megbeleki.delete (0, END)
         megbeleki.insert (0, 'Nincs értelme a számításnak.' )
         telitetsegki.delete (0,END)
