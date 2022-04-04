@@ -4,15 +4,7 @@ import math
 
 
 def szamitas ():
-    try:
-
-        r = int(sug_field.get()) / 10
-
-        m = int(mag_field.get()) / 10
-
-        bor_terfogat = int(bor_field.get())         # dm3 = l
-
-    except:
+    
 
     r = int(sugarbe.get())
     m = int(magssagbe.get())
@@ -49,15 +41,17 @@ def szamitas ():
 
     
 def hülyee ():
-    if len(sugarbe.get()) == 0 or len(magssagbe.get()) == 0 or len(borbe.get()) == 0 or type(sugarbe.get()) != int or type(magassagbe.get()) != int or type(borbe.get()) != int:
+    try:
+        szamitas ()
+    except:
         megbeleki.delete (0, END)
         megbeleki.insert (0, 'Nincs értelme a számításnak.' )
         telitetsegki.delete (0,END)
         telitetsegki.insert (0, 'Nincs értelme a számításnak.' )
         terfogatki.delete (0,END)
         terfogatki.insert (0, 'Nincs értelme a számításnak.' )
-    else:
-        szamitas()
+    
+        
 
 
 
