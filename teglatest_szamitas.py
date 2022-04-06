@@ -6,9 +6,6 @@ main.minsize (width=300, height=100)
 
 def ablak2 ():
 
-    
-
-
     abl2 = Toplevel(main)
     abl2.title ('Eredmények')
     abl2.minsize (width=300, height=100)
@@ -30,8 +27,8 @@ def ablak2 ():
     V = a * b * c
     A = 2 * (a*b + b*c + a*c)
 
-    felszinE.insert (0, str(V))
-    terfogatE.insert (0, str(A))
+    felszinE.insert (0, str(A))
+    terfogatE.insert (0, str(V))
 
 aL = Label (main, text='a:')
 aL.grid (column=1, row=1)
