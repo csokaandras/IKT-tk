@@ -14,9 +14,14 @@ def felszin ():
         a = float(aE.get())
         b = float(bE.get())
         c = float(cE.get())
-        A = 2 * (a*b + b*c + a*c)
-        eredmenyE.delete (0, END)
-        eredmenyE.insert (0, str(A))
+        
+        if a <= 0 or b <= 0 or c <= 0:
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+        else:
+            A = 2 * (a*b + b*c + a*c)
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, str(A))
 
     def hülyee ():
         try:
@@ -71,9 +76,14 @@ def terfogat ():
         a = float(aE.get())
         b = float(bE.get())
         c = float(cE.get())
-        V = a * b * c
-        eredmenyE.delete (0, END)
-        eredmenyE.insert (0, str(V))
+        
+        if a <= 0 or b <= 0 or c <= 0:
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+        else:
+            V = a * b * c
+            eredmenyE.delete (0, END)
+            eredmenyE.insert (0, str(V))
 
     def hülyee ():
         try:
