@@ -21,27 +21,27 @@ def felszin ():
     felszinA = Toplevel (foablak)
 
     aL = Label (felszinA, text='a:')
-    aL.grid (column=1, row=1)
+    aL.grid (column=1, row=1, sticky=E)
     aE = Entry (felszinA)
     aE.grid (column=2, row=1)
 
     bL = Label (felszinA, text='b:')
-    bL.grid (column=1, row=2)
+    bL.grid (column=1, row=2, sticky=E)
     bE = Entry (felszinA)
     bE.grid (column=2, row=2)
 
     cL = Label (felszinA, text='c:')
-    cL.grid (column=1, row=3)
+    cL.grid (column=1, row=3, sticky=E)
     cE = Entry (felszinA)
     cE.grid (column=2, row=3)
 
-    eredmenyL = Label (felszinA, text='Eredmény')
-    eredmenyL.grid (column=1, row=4)
+    eredmenyL = Label (felszinA, text='Eredmény:')
+    eredmenyL.grid (column=1, row=4, sticky=E)
     eredmenyE = Entry (felszinA)
     eredmenyE.grid (column=2, row=4)
 
     szamitasB = Button (felszinA, text='Számítás', command=szamitas)
-    szamitasB.grid (column=2, row=4, sticky=W)
+    szamitasB.grid (column=2, row=5, sticky=W)
 
     felszinA.mainloop ()
 #Felszín ablak vége
@@ -59,27 +59,27 @@ def terfogat ():
     terfogatA = Toplevel (foablak)
 
     aL = Label (terfogatA, text='a:')
-    aL.grid (column=1, row=1)
+    aL.grid (column=1, row=1, sticky=E)
     aE = Entry (terfogatA)
     aE.grid (column=2, row=1)
 
     bL = Label (terfogatA, text='b:')
-    bL.grid (column=1, row=2)
+    bL.grid (column=1, row=2, sticky=E)
     bE = Entry (terfogatA)
-    bE.grid (column=2, row=2)
+    bE.grid (column=2, row=2, sticky=E)
 
     cL = Label (terfogatA, text='c:')
-    cL.grid (column=1, row=3)
+    cL.grid (column=1, row=3, sticky=E)
     cE = Entry (terfogatA)
-    cE.grid (column=2, row=3)
+    cE.grid (column=2, row=3, sticky=E)
 
-    eredmenyL = Label (terfogatA, text='Eredmény')
-    eredmenyL.grid (column=1, row=4)
+    eredmenyL = Label (terfogatA, text='Eredmény:')
+    eredmenyL.grid (column=1, row=4, sticky=E)
     eredmenyE = Entry (terfogatA)
     eredmenyE.grid (column=2, row=4)
 
     szamitasB = Button (terfogatA, text='Számítás', command=szamitas)
-    szamitasB.grid (column=2, row=4, sticky=W)
+    szamitasB.grid (column=2, row=5, sticky=W)
 
     terfogatA.mainloop ()
 #Térfogat ablak vége
