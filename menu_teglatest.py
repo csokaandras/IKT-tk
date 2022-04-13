@@ -13,17 +13,21 @@ def nevjegy ():
 #Felszín téglatest ablak
 def felszinT ():
     def szamitas ():
-        a = float(aE.get())
-        b = float(bE.get())
-        c = float(cE.get())
-        
-        if a <= 0 or b <= 0 or c <= 0:
+        if aE.get() == '' or bE.get() == '' or cE.get() == '':
             eredmenyE.delete (0, END)
-            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
-            A = 2 * (a*b + b*c + a*c)
-            eredmenyE.delete (0, END)
-            eredmenyE.insert (0, str(A))
+            a = float(aE.get())
+            b = float(bE.get())
+            c = float(cE.get())
+            
+            if a <= 0 or b <= 0 or c <= 0:
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            else:
+                A = 2 * (a*b + b*c + a*c)
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, str(A))
 
     def hülyee ():
         try:
@@ -78,17 +82,21 @@ def felszinT ():
 #Térfogat téglatest ablak
 def terfogatT ():
     def szamitas ():
-        a = float(aE.get())
-        b = float(bE.get())
-        c = float(cE.get())
-        
-        if a <= 0 or b <= 0 or c <= 0:
+        if aE.get() == '' or bE.get() == '' or cE.get() == '':
             eredmenyE.delete (0, END)
-            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
-            V = a * b * c
-            eredmenyE.delete (0, END)
-            eredmenyE.insert (0, str(V))
+            a = float(aE.get())
+            b = float(bE.get())
+            c = float(cE.get())
+            
+            if a <= 0 or b <= 0 or c <= 0:
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            else:
+                V = a * b * c
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, str(V))
 
     def hülyee ():
         try:
@@ -143,17 +151,21 @@ def terfogatT ():
 #Felszín henger ablak
 def felszinH ():
     def szamitas ():
-        r = float(aE.get())
-        m = float(bE.get())
-        #c = float(cE.get())
-        
-        if r <= 0 or m <= 0:
+        if aE.get() == '' or bE.get() == '':
             eredmenyE.delete (0, END)
-            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
-            A = round (2 * math.pi * r * (r + m), 2)
-            eredmenyE.delete (0, END)
-            eredmenyE.insert (0, str(A))
+            r = float(aE.get())
+            m = float(bE.get())
+            #c = float(cE.get())
+            
+            if r <= 0 or m <= 0:
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            else:
+                A = round (2 * math.pi * r * (r + m), 2)
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, str(A))
 
     def hülyee ():
         try:
@@ -210,17 +222,21 @@ def felszinH ():
 #Térfogat henger ablak
 def terfogatH ():
     def szamitas ():
-        r = float(aE.get())
-        m = float(bE.get())
-        #c = float(cE.get())
-
-        if r <= 0 or m <= 0:
+        if aE.get() == '' or bE.get() == '':
             eredmenyE.delete (0, END)
-            eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            eredmenyE.insert (0, 'Adjon meg adatokat.' )
         else:
-            V = round (math.pi * r * r * m, 2)
-            eredmenyE.delete (0, END)
-            eredmenyE.insert (0, str(V))
+            r = float(aE.get())
+            m = float(bE.get())
+            #c = float(cE.get())
+
+            if r <= 0 or m <= 0:
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, 'Nincs értelme a számításnak.' )
+            else:
+                V = round (math.pi * r * r * m, 2)
+                eredmenyE.delete (0, END)
+                eredmenyE.insert (0, str(V))
 
     def hülyee ():
         try:
